@@ -1,5 +1,7 @@
+import 'package:budget/data/data.dart';
 import 'package:budget/models/category_model.dart';
 import 'package:budget/models/expense_model.dart';
+import 'package:budget/widgets/bar_chart.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,12 +20,14 @@ class _HomeScreenState extends State<HomeScreen> {
           SliverAppBar(
               forceElevated: true,
               floating: true,
+              pinned: true,
               expandedHeight: 100.0,
               leading: IconButton(
                 icon: Icon(Icons.settings),
                 onPressed: () {},
               ),
               flexibleSpace: FlexibleSpaceBar(
+                centerTitle: true,
                 title: Text('Budget App'),
               ),
               actions: [IconButton(icon: Icon(Icons.add), onPressed: () {})]),
@@ -44,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                    // child: BarChart(weeklySpending),
+                    child: BarChart(weeklySpending),
                   );
                 } else {
                   // // final Category category = categories[index - 1];
