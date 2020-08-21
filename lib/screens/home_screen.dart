@@ -51,15 +51,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: BarChart(weeklySpending),
                   );
                 } else {
-                  // // final Category category = categories[index - 1];
-                  // double totalAmountSpent = 0;
-                  // category.expenses.forEach((Expense expense) {
-                  //   totalAmountSpent += expense.cost;
-                  // });
+                  final Category category = categories[index - 1];
+                  double totalAmountSpent = 0;
+                  category.expenses.forEach((Expense expense) {
+                    totalAmountSpent += expense.cost;
+                  });
                   // return _buildCategory(category, totalAmountSpent);
                 }
               },
-              // `childCount: 1 + categories.length,
+              childCount: 1 + categories.length,
             ),
           ),
         ],
