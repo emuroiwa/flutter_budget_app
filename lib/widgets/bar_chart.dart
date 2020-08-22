@@ -30,10 +30,12 @@ class BarChart extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              IconButton(
-                icon: Icon(Icons.arrow_back),
-                iconSize: 30.0,
-                onPressed: () {},
+              Expanded(
+                child: IconButton(
+                  icon: Icon(Icons.arrow_back),
+                  iconSize: 28.0,
+                  onPressed: () {},
+                ),
               ),
               Text(
                 'Nov 10, 2019 - Nov 16, 2019',
@@ -43,10 +45,12 @@ class BarChart extends StatelessWidget {
                   letterSpacing: 1.2,
                 ),
               ),
-              IconButton(
-                icon: Icon(Icons.arrow_forward),
-                iconSize: 30.0,
-                onPressed: () {},
+              Expanded(
+                child: IconButton(
+                  icon: Icon(Icons.arrow_forward),
+                  iconSize: 30.0,
+                  onPressed: () {},
+                ),
               ),
             ],
           ),
