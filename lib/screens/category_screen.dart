@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:budget/helpers/color_helper.dart';
+import 'package:budget/helpers/color_helper.dart';
 import 'package:budget/models/category_model.dart';
 import 'package:budget/models/expense_model.dart';
 import 'package:budget/widgets/radial_painter.dart';
@@ -105,7 +105,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
               child: CustomPaint(
                 foregroundPainter: RadialPainter(
                   bgColor: Colors.grey[200],
-                  //lineColor: getColor(context, percent),
+                  lineColor: getColor(context, percent),
                   percent: percent,
                   width: 15.0,
                 ),
